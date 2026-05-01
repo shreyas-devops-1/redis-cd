@@ -14,7 +14,7 @@
   notify: Restart Redis
 
 - name: Enable Redis
-  systemd:
-    name: redis-server
-    enabled: yes
+  service:
+    name: redis
     state: started
+    enabled: yes
