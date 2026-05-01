@@ -1,0 +1,6 @@
+- name: Configure Redis on Middleware
+  hosts: role_middleware
+  become: yes
+
+  roles:
+    - redis

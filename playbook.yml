@@ -1,0 +1,6 @@
+---
+- name: Install Redis on EC2 and Local
+  hosts: localhost
+  become: true
+  roles:
+    - redis

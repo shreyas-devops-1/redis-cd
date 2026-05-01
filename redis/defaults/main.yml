@@ -1,0 +1,6 @@
+---
+# defaults file for redis
+
+redis_port: 6379
+redis_bind: 0.0.0.0
+redis_maxmemory: 256mb

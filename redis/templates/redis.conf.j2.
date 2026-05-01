@@ -1,0 +1,4 @@
+bind {{ redis_bind }}
+port {{ redis_port }}
+maxmemory {{ redis_maxmemory }}
+maxmemory-policy allkeys-lru
