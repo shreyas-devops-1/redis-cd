@@ -1,0 +1,2 @@
+[redis_servers]
+localhost ansible_connection=local
