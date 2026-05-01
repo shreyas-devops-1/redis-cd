@@ -6,8 +6,7 @@ pipeline {
     environment {
         ENVIRONMENT = 'dev'
         PLAYBOOK    = 'redis-setup.yml'
-        INVENTORY   = 'aws_ec2.yaml'
-        AWS_REGION  = 'us-east-1'
+        INVENTORY   = 'inventory/hosts.ini'
     }
 
     options {
@@ -28,12 +27,12 @@ pipeline {
     post {
         failure {
             script {
-                rollbackRedis(inventory: env.INVENTORY)  // env.INVENTORY, not bare INVENTORY
+                rollbackRedis(inventory: env.INVENTORY)
             }
         }
         always {
             node('') {
-                cleanWs()                                // wrapped in node to provide FilePath context
+                cleanWs()
             }
         }
     }
