@@ -1,6 +1,5 @@
-- name: Configure Redis on Middleware
-  hosts: role_middleware
+- name: Configure Redis on Local Server
+  hosts: redis_servers
   become: yes
-
   roles:
     - redis
