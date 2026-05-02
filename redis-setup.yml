@@ -1,5 +1,0 @@
-- name: Configure Redis on Local Server
-  hosts: redis_servers
-  become: yes
-  roles:
-    - redis
