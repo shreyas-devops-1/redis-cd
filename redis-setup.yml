@@ -1,6 +1,4 @@
-- name: Configure Redis on Middleware
-  hosts: role_middleware
+- hosts: all
   become: yes
-
-  roles:
-    - redis
+  tasks:
+    - include_tasks: roles/tasks/main.yml
