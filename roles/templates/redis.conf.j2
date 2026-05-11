@@ -1,0 +1,7 @@
+bind 127.0.0.1 {{ redis_bind_ip }}
+port {{ redis_port }}
+
+requirepass {{ redis_password }}
+
+maxmemory {{ redis_maxmemory }}
+maxmemory-policy allkeys-lru
