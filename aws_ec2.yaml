@@ -7,7 +7,7 @@ keyed_groups:
   - key: tags.Role
     prefix: role
 hostnames:
-  - ip-address          # use public IP instead of instance-id
+  - ip-address         
 compose:
   ansible_host: public_ip_address
   ansible_connection: "'ssh'"
